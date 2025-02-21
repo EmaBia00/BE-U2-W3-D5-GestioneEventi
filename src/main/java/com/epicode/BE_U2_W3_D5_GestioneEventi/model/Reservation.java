@@ -11,7 +11,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "reservations")
 public class Reservation {
-    // Getters e Setters
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

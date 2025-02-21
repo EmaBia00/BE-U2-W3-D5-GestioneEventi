@@ -1,5 +1,6 @@
 package com.epicode.BE_U2_W3_D5_GestioneEventi.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,6 +26,7 @@ public class User {
     private Role role; // UTENTE o ORGANIZZATORE
 
     @OneToMany(mappedBy = "organizer", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Event> events = new ArrayList<>();
 
     public User(String email, String password, Role role) {

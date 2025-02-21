@@ -1,5 +1,6 @@
 package com.epicode.BE_U2_W3_D5_GestioneEventi.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +26,7 @@ public class Event {
 
     @ManyToOne
     @JoinColumn(name = "organizer_id", nullable = false)
+    @JsonBackReference
     private User organizer;
 
     @OneToMany(mappedBy = "event", cascade = CascadeType.ALL, orphanRemoval = true)

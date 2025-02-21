@@ -6,6 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BeU2W3D5GestioneEventiApplication {
 
+	//NEL PACKAGE _POSTMANPOSTGRESQLTESTED SONO PRESENTI DEGLI STAMP DI TEST
+	//FATTI SUL DB E LE CHIAMATE REST CON POSTMAN
 	public static void main(String[] args) {
 		SpringApplication.run(BeU2W3D5GestioneEventiApplication.class, args);
 	}
